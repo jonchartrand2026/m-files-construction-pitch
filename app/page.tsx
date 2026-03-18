@@ -8,23 +8,66 @@ export default function Home() {
       <div className="scanline"></div>
 
       {/* Hero Section */}
-      <section className="relative flex min-h-[70vh] flex-col items-center justify-center bg-transparent border-b border-zinc-800/40 px-6 py-24 text-center text-white overflow-hidden">
+      <section className="relative flex min-h-[85vh] flex-col items-center justify-center border-b border-zinc-800/40 px-6 py-24 text-center text-white overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 bg-[url('/Gemini_Generated_Image_hdcas5hdcas5hdca.png')] bg-cover bg-center bg-no-repeat pointer-events-none"></div>
+        {/* Deep M-Files Blue Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-blue-950/70 to-blue-950/20 pointer-events-none"></div>
+        {/* Noise Overlay */}
         <div className="absolute inset-0 bg-[url('/noise.svg')] opacity-10 mix-blend-overlay pointer-events-none"></div>
-        <div className="relative z-10 mx-auto max-w-5xl flex flex-col items-center gap-8">
-          <div className="inline-flex items-center precision-border bg-m-files-blue/10 px-4 py-1.5 text-xs font-mono tracking-widest uppercase text-m-files-blue backdrop-blur-sm shadow-[inset_0_0_10px_rgba(0,84,149,0.3)]">
+        
+        {/* Pulsing Data Points (Micro-Interactions) */}
+        {/* Drawings */}
+        <div className="absolute top-[25%] left-[15%] group cursor-default z-20">
+          <div className="relative flex h-5 w-5">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-m-files-blue opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-5 w-5 bg-blue-400 border border-white/80 shadow-[0_0_15px_rgba(0,84,149,0.8)]"></span>
+          </div>
+          <div className="absolute top-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-navy-black/90 backdrop-blur-xl precision-border px-4 py-2 text-xs font-mono text-blue-300 whitespace-nowrap shadow-2xl pointer-events-none">
+            DATA_STREAM: DRAWINGS
+          </div>
+        </div>
+
+        {/* Compliance */}
+        <div className="absolute top-[40%] right-[20%] group cursor-default z-20">
+          <div className="relative flex h-5 w-5">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-m-files-blue opacity-75 animate-[ping_1.5s_cubic-bezier(0,0,0.2,1)_infinite]"></span>
+            <span className="relative inline-flex rounded-full h-5 w-5 bg-blue-400 border border-white/80 shadow-[0_0_15px_rgba(0,84,149,0.8)]"></span>
+          </div>
+          <div className="absolute top-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-navy-black/90 backdrop-blur-xl precision-border px-4 py-2 text-xs font-mono text-blue-300 whitespace-nowrap shadow-2xl pointer-events-none">
+            DATA_STREAM: COMPLIANCE
+          </div>
+        </div>
+
+        {/* Safety */}
+        <div className="absolute bottom-[30%] left-[30%] group cursor-default z-20">
+          <div className="relative flex h-5 w-5">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-m-files-blue opacity-75 animate-[ping_2s_cubic-bezier(0,0,0.2,1)_infinite]"></span>
+            <span className="relative inline-flex rounded-full h-5 w-5 bg-blue-400 border border-white/80 shadow-[0_0_15px_rgba(0,84,149,0.8)]"></span>
+          </div>
+          <div className="absolute top-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-navy-black/90 backdrop-blur-xl precision-border px-4 py-2 text-xs font-mono text-blue-300 whitespace-nowrap shadow-2xl pointer-events-none">
+            DATA_STREAM: SAFETY
+          </div>
+        </div>
+
+        <div className="relative z-10 mx-auto max-w-5xl flex flex-col items-center gap-8 mt-4">
+          <div className="inline-flex items-center precision-border bg-m-files-blue/30 px-5 py-2 text-xs font-mono tracking-widest uppercase text-white backdrop-blur-md shadow-[inset_0_0_20px_rgba(0,84,149,0.6)]">
             <span className="flex h-2 w-2 bg-safety-orange mr-3 animate-pulse shadow-[0_0_8px_rgba(255,130,0,0.8)]"></span>
             ACTIVE: CONSTRUCT_INTEL_SYSTEM
           </div>
-          <h1 className="text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl drop-shadow-sm text-zinc-100">
-            M-Files for Construction<br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-m-files-blue to-blue-400 drop-shadow-[0_0_20px_rgba(0,84,149,0.4)]">The Zero-Click Jobsite</span>
+          <h1 className="text-6xl font-extrabold tracking-tight sm:text-7xl md:text-8xl drop-shadow-2xl text-white">
+            M-Files for Construction:<br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-white drop-shadow-[0_0_30px_rgba(0,84,149,0.8)]">The Zero-Click Jobsite</span>
           </h1>
-          <p className="max-w-3xl text-xl leading-relaxed text-zinc-400 sm:text-2xl font-light">
-            Automated Compliance and Real-Time ROI. Stop searching, start building. The intelligent information management platform built strictly for builders.
+          <p className="max-w-3xl text-xl leading-relaxed text-blue-50 sm:text-2xl font-medium drop-shadow-lg">
+            TEAM IM is signaling a high-investment partnership to the M-Files community with automated compliance and real-time field ROI.
           </p>
-          <div className="flex flex-col gap-4 sm:flex-row mt-6 w-full justify-center">
-            <button className="btn-mechanical precision-border bg-safety-orange/20 px-10 py-4 text-lg font-mono font-bold tracking-widest text-safety-orange backdrop-blur-md">
-              [ INITIATE_DEMO ]
+          <div className="flex flex-col gap-6 sm:flex-row mt-8 w-full justify-center">
+            <button className="btn-mechanical precision-border bg-safety-orange/80 hover:bg-safety-orange px-8 py-4 text-sm sm:text-base font-mono font-bold tracking-widest text-white backdrop-blur-md shadow-[0_0_20px_rgba(255,130,0,0.3)]">
+              [ VIEW ROI CALCULATOR ]
+            </button>
+            <button className="btn-mechanical precision-border bg-navy-black/60 hover:bg-m-files-blue/40 px-8 py-4 text-sm sm:text-base font-mono font-bold tracking-widest text-white backdrop-blur-md shadow-[0_0_20px_rgba(0,84,149,0.3)] border-m-files-blue/50">
+              [ EXPLORE 5 PILLARS ]
             </button>
           </div>
         </div>
