@@ -1,4 +1,5 @@
 import ROICalculator from "@/components/ROICalculator";
+import ComparisonToggle from "@/components/ComparisonToggle";
 
 export default function Home() {
   return (
@@ -24,6 +25,11 @@ export default function Home() {
             </button>
           </div>
         </div>
+      </section>
+
+      {/* Comparison Toggle Section */}
+      <section className="bg-black py-24 px-6 relative z-20">
+        <ComparisonToggle />
       </section>
 
       {/* ROI Calculator Section */}
