@@ -3,9 +3,9 @@
 import { useState } from "react";
 
 export default function ROICalculator() {
-  const [employees, setEmployees] = useState(50);
+  const [employees, setEmployees] = useState(20);
   const [hourlyRate, setHourlyRate] = useState(45);
-  const [hoursLost, setHoursLost] = useState(5); // Hours lost per week per employee
+  const [hoursLost, setHoursLost] = useState(2); // Hours lost per week per employee
   
   const weeklyLoss = employees * hourlyRate * hoursLost;
   const annualLoss = weeklyLoss * 52;
